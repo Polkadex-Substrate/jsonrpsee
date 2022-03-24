@@ -221,6 +221,7 @@ impl From<soketto::connection::Error> for Error {
 	}
 }
 
+#[cfg(feature = "http-helpers")]
 impl From<hyper::Error> for Error {
 	fn from(hyper_err: hyper::Error) -> Error {
 		Error::Transport(hyper_err.into())
