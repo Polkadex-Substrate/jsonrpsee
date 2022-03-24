@@ -17,8 +17,10 @@ jsonrpsee-core = { path = "../core", version = "0.9.0", features = ["server"] }
 tracing = "0.1"
 serde_json = { version = "1", features = ["raw_value"] }
 soketto = "0.7.1"
-tokio = { version = "1.8", features = ["net", "rt-multi-thread", "macros", "time"] }
-tokio-util = { version = "0.7", features = ["compat"] }
+#tokio = { version = "1.8", features = ["net", "rt-multi-thread", "macros", "time"] }
+#tokio-util = { version = "0.7", features = ["compat"] }
+tokio = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", features = ["net", "rt-multi-thread", "macros", "time"] }
+tokio-util = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", features = ["compat"]}
 
 [dev-dependencies]
 anyhow = "1"
