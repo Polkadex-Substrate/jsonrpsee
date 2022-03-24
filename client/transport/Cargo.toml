@@ -16,8 +16,10 @@ tracing = { version = "0.1", optional = true }
 thiserror = { version = "1", optional = true }
 futures = { version = "0.3.14", default-features = false, features = ["std"], optional = true }
 http = { version = "0.2", optional = true }
-tokio-util = { version = "0.7", features = ["compat"], optional = true }
-tokio = { version = "1", features = ["net", "time", "macros"], optional = true }
+#tokio-util = { version = "0.7", features = ["compat"], optional = true }
+#tokio = { version = "1", features = ["net", "time", "macros"], optional = true }
+tokio = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", features = ["net", "time", "macros"],optional = true}
+tokio-util = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", features = ["compat"], optional = true}
 pin-project = { version = "1", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 webpki-roots = { version = "0.22", optional = true }
