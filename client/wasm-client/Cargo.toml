@@ -17,5 +17,5 @@ jsonrpsee-core = { path = "../../core", version = "0.15.1", features = ["async-w
 [dev-dependencies]
 tracing-subscriber = { version = "0.3.3", features = ["env-filter"] }
 jsonrpsee-test-utils = { path = "../../test-utils" }
-tokio = { version = "1", features = ["macros"] }
+tokio = { git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", version = "1", features = ["macros"] }
 serde_json = "1"

@@ -21,6 +21,6 @@ proc-macro-crate = "1"
 [dev-dependencies]
 jsonrpsee = { path = "../jsonrpsee", features = ["full"] }
 trybuild = "1.0"
-tokio = { version = "1.14.1", features = ["rt", "macros"] }
+tokio = { git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx", version = "1.14.0", features = ["rt", "macros"] }
 futures-channel = { version = "0.3.14", default-features = false }
 futures-util = { version = "0.3.14", default-features = false }
