@@ -17,3 +17,8 @@ members = [
 	"wasm-tests",
 ]
 resolver = "2"
+
+
+[patch.crates-io]
+tokio = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx"}
+tokio-util = {git="https://github.com/Polkadex-Substrate/tokio.git", branch="raoul/tokio-1.14.0-sgx"}
